@@ -28,7 +28,7 @@ public class Raygun {
     // Methods
     //TODO: Implement appropriate getters and setters for the class
 
-    public void fireAt(Alien a) {
+    public int fireAt(Alien a) {
         //TODO: Implement the method
         /*The gun should only fire if it is charged. Firing the gun will reduce the charge by 1. If the bug isDodging
          * bug.miss() should be called, otherwise bug.hit */
@@ -39,16 +39,22 @@ public class Raygun {
             } else {
                 a.hit();
             }
-        }
 
+        }
+        return cChrg;
     }
 
-    public void recharge() {
+    public int recharge() {
         //TODO: Implement the method
         /*Increases the current charge by 1*/
         if (!isFullyCharged()) {
             cChrg++;
+            return cChrg;
+        }else{
+
+            return cChrg;
         }
+
     }
 
     public boolean isCharged() {
